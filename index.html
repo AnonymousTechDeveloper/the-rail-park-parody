@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Rail Park | Ansh Malviya</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Ansh Malviya" />
+        <meta name="description" content="This is a parody website made as an evaluative component for recruitment in Department of Visual Media, BITS Pilani." />
+        <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <link rel="icon" href="./assets/favicon.png"/>
+        <script src="https://use.fontawesome.com/releases/v6.2.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav id="navbar">
+            <div class="nav-content">
+                <div class="nav-menu-button-container">
+                    <button class="nav-menu-button vertically-centered"></button>
+                </div>
+                <div class="nav-links-container">
+                    <div class="nav-link-container not-important-mobile">
+                        <span class="vertically-centered">Visit</span>
+                    </div>
+                    <div class="nav-logo-container">
+                        <a href=".">
+                            <svg class="nav-logo" width="50" height="55" viewBox="0 0 50 55" xmlns="http://www.w3.org/2000/svg" class="Logo__LogoWrapper-sc-82qk6d-0 ashX">
+                                <title>Rail Park Logo</title>
+                                <path d="M50 24.1047C50 32.5791 46.255 38.7366 41.06 42.4337L37.8017 32.9445L41.7965 32.9511L40.2512 29.3159L36.5555 29.3127L33.6029 20.7209L36.5983 20.7241L35.362 17.8167L32.6034 17.8134L30.2788 11.0424L32.4818 11.0457L31.6565 9.10739L29.6114 9.10412L26.4977 0.0391575C32.1825 0.300208 37.2986 2.01661 41.0732 4.66301C46.3602 8.17413 50 15.5586 50 24.1047ZM9.35425 29.2768L13.0664 29.28L16.1011 20.6947L13.017 20.6915L14.2566 17.7873L17.1303 17.7906L19.5239 11.0261L17.1467 11.0228L17.972 9.08781L20.2078 9.09107L23.4103 0.0391575C13.6779 0.512311 4.82015 5.33521 1.50589 14.906C0.48333 17.8558 0 20.9852 0 24.1047C0 32.3506 3.52798 38.4592 8.50266 42.1824L11.7808 32.9119L7.80562 32.9054L9.35425 29.2768ZM16.7883 29.2866L32.8697 29.3061L30.5583 20.7143L19.1787 20.7013L16.7883 29.2866ZM27.4282 9.10412L24.9786 0C24.9655 0 24.949 0 24.9359 0L22.4042 9.09433L27.4282 9.10412ZM21.8682 11.0326L19.9842 17.8004L29.7725 17.8134L27.9509 11.0424L21.8682 11.0326ZM15.7789 32.9184L12.5436 44.5482C13.6286 45.0344 14.7465 45.4292 15.8841 45.7262C17.3802 46.1178 20.1946 46.3429 23.213 46.4114C22.9664 50.5165 22.654 54.8042 22.414 55H27.586C27.3427 54.8042 27.0303 50.5197 26.787 46.4147C29.8481 46.3527 32.679 46.1243 34.1159 45.7262C35.099 45.4554 36.0689 45.1127 37.0126 44.7048L33.8463 32.938L15.7789 32.9184Z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="nav-link-container not-important-mobile">
+                        <span class="vertically-centered">Vision</span>
+                    </div>
+                </div>
+                <div class="nav-options-container not-important-mobile">
+                    <button class="nav-donate-button vertically-centered">Donate</button>
+                    <div class="nav-lang-container">
+                        <a class="nav-lang-option">ES</a> | 
+                        <a class="nav-lang-option">中文</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="main-body">
+            <div class="main-title-wrapper">
+                <div class="main-title" id="main-title">
+                    <div class="main-title-line">The Rail</div>
+                    <div class="main-title-line">Park</div>
+                </div>
+            </div>
+            <div class="carousel-section">
+                <div class="carousel-scroller scroller-button-left not-important-mobile" onclick="switchSlide(-1)">
+                    <div class="arrow-left carousel-arrow vertically-centered">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-tail"></div>
+                    </div>
+                </div>
+                <div class="carousel-section-content" id="carousel-outer-container">
+                    <div class="carousel-content" id="carousel-content">
+                        <div class="carousel-content-text" id="carousel-text-content">
+                            <div class="carousel-title" id="carousel-title">Phase One is free & open daily</div>
+                            <a href="">
+                                <div class="carousel-link">
+                                    <span id="carousel-link">Plan your visit</span>
+                                    <div class="carousel-link-arrow">
+                                        <div class="arrow-tail"></div>
+                                        <div class="arrow-head"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swipe-indicator not-important-desktop">
+                            <span class="carousel-sripe-arrow">&leftarrow;</span>
+                            <span class="carousel-swipe-text">Swipe</span>
+                            <span class="carousel-swipe-arrow">&rightarrow;</span>
+                        </div>
+                        <div class="carousel-image-container">
+                            <img class="carousel-image carousel-intro-anim-elem" id="carousel-image" src="./assets/images/carousel_image_1.avif" />
+                            <img class="secondary-carousel-image badge-intro-anim-elem" id="sec-carousel-image" src="./assets/images/hours-badge.svg" />
+                        </div>
+                    </div>
+                    <div class="carousel-content not-important-desktop" id="carousel-content">
+                        <div class="carousel-content-text" id="carousel-text-content">
+                            <div class="carousel-title" id="carousel-title">Turning historic tracks into an unparalleled park.</div>
+                            <a href="">
+                                <div class="carousel-link">
+                                    <span id="carousel-link">See the full version</span>
+                                    <div class="carousel-link-arrow">
+                                        <div class="arrow-tail"></div>
+                                        <div class="arrow-head"></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swipe-indicator not-important-desktop">
+                            <span class="carousel-sripe-arrow">&leftarrow;</span>
+                            <span class="carousel-swipe-text">Swipe</span>
+                            <span class="carousel-swipe-arrow">&rightarrow;</span>
+                        </div>
+                        <div class="carousel-image-container">
+                            <img class="carousel-image carousel-intro-anim-elem" id="carousel-image" src="./assets/images/carousel_image_2.avif" />
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-scroller scroller-button-right not-important-mobile" onclick="switchSlide(1)">
+                    <div class="arrow-right carousel-arrow vertically-centered">
+                        <div class="arrow-tail"></div>
+                        <div class="arrow-head"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="visit-title-wrapper">
+                <div class="visit-title" id="visit-title">
+                    <div>Visiting the</div>
+                    <div>Rail Park</div>
+                </div>
+            </div>
+            <div class="visit-section">
+                <div class="visit-content-container">
+                    <div class="visit-content">
+                        <div class="visit-media-container">
+                            <video class="visit-media-video" src="./assets/videos/noble-st-entrance.mp4" muted loop></video>
+                            <img class="visit-media-thumbnail" src="./assets/images/noble-st-entrance.avif">
+                        </div>
+                        <div class="visit-desc-container">
+                            <div class="visit-arrow-left">
+                                <div class="visit-arrow-head"></div>
+                                <div class="visit-arrow-tail"></div>
+                            </div>
+                            <div class="visit-content-main">
+                                <div class="visit-loca-street">
+                                    <span class="vertically-centered">Noble St Entrance</span>
+                                </div>
+                                <div class="visit-icon-container">
+                                    <svg class="vertically-centered" width="68" height="68" viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M66 33.7C66 15.9 51.5 1.5 33.7 1.5C15.9 1.5 1.5 15.9 1.5 33.7C1.5 51.5 15.9 66 33.7 66C51.5 66 66 51.5 66 33.7ZM0 33.7C0 15.1 15.1 0 33.7 0C52.3 0 67.4 15.1 67.4 33.7C67.4 52.3 52.3 67.5 33.7 67.5C15.1 67.5 0 52.3 0 33.7Z"></path><path d="M41.8 18.3C40.2 18.3 38.8 19.6 38.8 21.3C38.8 22.9 40.1 24.3 41.8 24.3C43.4 24.3 44.8 23 44.8 21.3C44.7 19.7 43.4 18.3 41.8 18.3Z"></path><path d="M31.4 20.5C30.4 20.5 29.3 20.9 28.5 21.7L25 25L26.8 26.9L30.3 23.5C30.6 23.2 31 23.1 31.4 23.1C31.7 23.1 31.9 23.2 32.1 23.3L34.5 24.6L26.8 31.8C26.7 31.8 26.7 31.9 26.6 31.9L28.1 33.4C29 32.9 30 32.7 31.1 32.7C34.7 32.7 37.7 35.6 37.7 39.3C37.7 40.4 37.4 41.4 37 42.3L38.5 43.8C39.3 42.5 39.8 41 39.8 39.3C39.8 37.7 39.4 36.2 38.6 34.9L42.4 34.7L41.5 43.6L44.1 43.9L45.1 33.5C45.1 33.1 45 32.7 44.7 32.5C44.5 32.2 44.1 32.1 43.8 32.1H43.7L37.5 32.5L40.8 28.2C41.7 27.1 41.3 25.5 40.1 24.9L36.9 23L33.4 21C32.7 20.7 32 20.5 31.4 20.5Z"></path><path d="M25.3 32.9C23.6 34.5 22.5 36.7 22.5 39.3C22.5 44 26.4 47.9 31.1 47.9C33.6 47.9 35.9 46.8 37.5 45.1L36 43.6C34.8 45 33 45.8 31.1 45.8C27.5 45.8 24.5 42.9 24.5 39.2C24.5 37.2 25.4 35.5 26.7 34.3L25.3 32.9Z"></path></svg>
+                                    <div class="visit-icon-desc-container">
+                                        <div class="visit-icon-desc-triangle"></div>
+                                        <div class="visit-icon-desc-box">This entrance is wheelchair accessible, with an ADA compliant slope.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visit-content-other">
+                                <div class="visit-loca-street">1300 Noble St.</div>
+                                <a href="">
+                                    <div class="visit-directions">
+                                        <div class="visit-directions-text">Get Directions</div>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visit-content">
+                        <div class="visit-media-container">
+                            <video class="visit-media-video" src="./assets/videos/callowhill-st-entrance.mp4" muted loop></video>
+                            <img class="visit-media-thumbnail" src="./assets/images/callowhill-st-entrance.avif">
+                        </div>
+                        <div class="visit-desc-container">
+                            <div class="visit-arrow-right">
+                                <div class="visit-arrow-head"></div>
+                                <div class="visit-arrow-tail"></div>
+                            </div>
+                            <div class="visit-content-main">
+                                <div class="visit-loca-street">
+                                    <span class="vertically-centered">Callowhill St Entrance</span>
+                                </div>
+                                <div class="visit-icon-container">
+                                    <svg class="vertically-centered" width="68" height="68" viewBox="0 0 68 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M41.8 25.8H50.6V28H44V35.7H36.3V43.4H28.6V51.1H20.1V48.9H26.4V41.2H34.1V33.5H41.8V25.8ZM20.5 34.1L34.8 19.8V25H37V16H28V18.2H33.2L19 32.5L20.5 34.1ZM67.1 33.6C67.1 52.1 52 67.2 33.5 67.2C15.1 67.1 0 52.1 0 33.6C0 15.1 15.1 0 33.6 0C52.1 0 67.1 15.1 67.1 33.6ZM65.7 33.6C65.7 15.9 51.3 1.5 33.6 1.5C15.9 1.5 1.5 15.9 1.5 33.6C1.5 51.3 15.9 65.7 33.6 65.7C51.3 65.7 65.7 51.3 65.7 33.6Z"></path></svg>
+                                    <div class="visit-icon-desc-container">
+                                        <div class="visit-icon-desc-triangle"></div>
+                                        <div class="visit-icon-desc-box">This entrance is a staircase. For ramp access, use the Noble St. entrance.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="visit-content-other">
+                                <div class="visit-loca-street">Between 11th & 12th St</div>
+                                <a href="">
+                                    <div class="visit-directions">
+                                        <div class="visit-directions-text">Get Directions</div>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hov-media-section">
+                <div class="hov-media-title" id="hov-media-title">
+                    <div class="hov-media-title-line">We are building a</div>
+                    <div class="hov-media-container">
+                        <div class="hov-media-title-line" id="hov-media-line-main">three mile greenway</div>
+                        <video class="hov-media" id="hov-media" src="./assets/videos/visit-video-placeholder-small.mp4" autoplay muted playsinline loop></video>
+                    </div>
+                    <div class="hov-media-title-line">with three distinct sections</div>
+                    <div class="hov-media-title-line">across ten neighborhoods</div>
+                </div>
+                <div class="hov-media-desc">And there’s a lot more to do.</div>
+            </div>
+            <div class="image-parallax-section">
+                <div class="image-parallax-container">
+                    <div class="image-parallax-media-wrapper">
+                        <video class="image-parallax-media" src="./assets/videos/homepage-viaduct.mp4" autoplay muted loop></video>
+                        <img class="image-parallax-thumbnail" src="./assets/images/homepage-viaduct.avif"></img>
+                    </div>
+                    <div class="image-parallax-media-text-wrapper">
+                        <div class="image-parallax-media-text">
+                            <div class="image-parallax-media-title">The Viaduct</div>
+                            <div class="image-parallax-media-desc">Chinatown &rightarrow; Northern Liberties</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-parallax-container">
+                    <div class="image-parallax-media-wrapper">
+                        <video class="image-parallax-media" src="./assets/videos/homepage-cut.mp4" autoplay muted loop></video>
+                        <img class="image-parallax-thumbnail" src="./assets/images/homepage-cut"></img>
+                    </div>
+                    <div class="image-parallax-media-text-wrapper">
+                        <div class="image-parallax-media-text">
+                            <div class="image-parallax-media-title">The Cut</div>
+                            <div class="image-parallax-media-desc">Callowhill &rightarrow; Francisville</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-parallax-container">
+                    <div class="image-parallax-desc" id="image-parallax-desc">
+                        <div class="image-parallax-text">Our full vision for the Rail Park is to create a three-mile greenway with three sections: The Viaduct, The Cut, and The Tunnel. It will reach from Northern Liberties to Fairmount Park, with pathways and gathering spaces that will serve pedestrians, bicyclists, neighbors, and visitors alike.</div>
+                        <a href="">Learn more about the full vision <span class="link-arrow">&rightarrow;</span></a>
+                    </div>
+                </div>
+                <div class="image-parallax-container">
+                    <div class="image-parallax-media-wrapper">
+                        <video class="image-parallax-media" src="./assets/videos/homepage-tunnel.mp4" autoplay muted loop></video>
+                        <img class="image-parallax-thumbnail" src="./assets/images/homepage-tunnel.avif"></img>
+                    </div>
+                    <div class="image-parallax-media-text-wrapper">
+                        <div class="image-parallax-media-text">
+                            <div class="image-parallax-media-title">The Tunnel</div>
+                            <div class="image-parallax-media-desc">Fairmount &rightarrow; Brewerytown</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="future-events-section">
+                <div class="future-events-full-cal-container">
+                    <button class="future-events-full-cal-button">Full Event Calendar <span>&rightarrow;</span></button>
+                </div>
+                <div class="future-events-main">
+                    <div class="future-events-title">Upcoming Events</div>
+                    <div class="future-events-container">
+                        <div class="future-event-card">
+                            <div class="future-event-image-wrapper">
+                                <img class="future-event-image" src="./assets/images/volunteer_happy_hour.jpeg">
+                            </div>
+                            <div class="future-event-desc">
+                                <div class="future-event-date">Thursday, April 10, 2025</div>
+                                <div class="future-event-title">Volunteer Happy Hour</div>
+                                <div class="future-event-link">
+                                    <a href="">
+                                        <span>Details</span>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="future-event-card">
+                            <div class="future-event-image-wrapper">
+                                <img class="future-event-image" src="./assets/images/three_mile_vision_tour.jpg">
+                            </div>
+                            <div class="future-event-desc">
+                                <div class="future-event-date">Saturday, April 12, 2025</div>
+                                <div class="future-event-title">Three Mile Vision Tour</div>
+                                <div class="future-event-link">
+                                    <a href="">
+                                        <span>Details</span>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="future-event-card">
+                            <div class="future-event-image-wrapper">
+                                <img class="future-event-image" src="./assets/images/earth_day.jpg">
+                            </div>
+                            <div class="future-event-desc">
+                                <div class="future-event-date">Saturday, April 26, 2025</div>
+                                <div class="future-event-title">Environmental Justice Tour</div>
+                                <div class="future-event-link">
+                                    <a href="">
+                                        <span>Details</span>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="future-event-card">
+                            <div class="future-event-image-wrapper">
+                                <img class="future-event-image" src="./assets/images/spring_love.jpeg">
+                            </div>
+                            <div class="future-event-desc">
+                                <div class="future-event-date">Saturday, May 10, 2025</div>
+                                <div class="future-event-title">Spring Love Your Park Cleanup</div>
+                                <div class="future-event-link">
+                                    <a href="">
+                                        <span>Details</span>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="future-event-card">
+                            <div class="future-event-image-wrapper">
+                                <img class="future-event-image" src="./assets/images/three_mile_vision_tour.jpg">
+                            </div>
+                            <div class="future-event-desc">
+                                <div class="future-event-date">Saturday, April 12, 2025</div>
+                                <div class="future-event-title">Three Mile Vision Tour</div>
+                                <div class="future-event-link">
+                                    <a href="">
+                                        <span>Details</span>
+                                        <div class="ext-link-arrow">
+                                            <div class="ext-link-arrow-tail"></div>
+                                            <div class="ext-link-arrow-head"></div>
+                                        </div>  
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="email-section">
+            <div class="email-section-content">
+                <div class="email-section-text" id="email-section-text">Be the first to know about news, events, and progress.</div>
+                <div class="email-section-input-wrapper" id="email-section-input-wrapper">
+                    <input type="email" class="email-section-input" id="email-section-input" spellcheck="false" placeholder="Enter your email" />
+                    <button class="email-submit-button" id="email-submit-button" disabled >
+                        <div class="email-arrow">
+                            <div class="email-arrow-head"></div>
+                            <div class="email-arrow-tail"></div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-donate-container">
+                <div class="footer-donate-wrapper">
+                    <video class="footer-donate-coin-video" src="./assets/videos/donate-coin-mario.mp4" muted autoplay loop></video>
+                    <svg class="footer-donate-text" width="239" height="239" viewBox="0 0 239 239" fill="var(--color-white)" xmlns="http://www.w3.org/2000/svg" class="Footer__SVGWrapper-sc-cab5cr-7 dyHHE"><title>Click here to donate today</title><path d="M25.2788 142.115C23.1723 144.85 20.1082 146.504 16.0865 147.077C12.0649 147.649 8.68163 146.95 5.87287 144.978C3.06411 143.006 1.34055 140.079 0.829866 136.199C0.383018 133.145 0.766031 130.474 2.04274 128.056C3.25561 125.639 5.17068 124.048 7.66026 123.158L9.703 126.911C8.04327 127.547 6.76656 128.629 5.9367 130.283C5.04301 131.873 4.78766 133.591 5.04301 135.435C5.42602 137.916 6.57506 139.825 8.42629 141.161C10.3413 142.497 12.6394 142.942 15.3844 142.497C18.1293 142.115 20.2358 140.97 21.7041 139.189C23.1723 137.407 23.683 135.245 23.2999 132.764C23.0446 130.855 22.2786 129.265 21.0019 128.056C19.7252 126.784 18.1931 126.084 16.4057 125.957L17.2356 121.758C19.8528 121.886 22.1509 122.903 24.066 124.875C25.9172 126.847 27.1301 129.265 27.5131 132.318C28.1514 136.072 27.3854 139.38 25.2788 142.115Z"></path><path d="M22.4062 111.071L23.8106 99.2388L27.9599 99.7477L25.981 116.033L0 112.852L0.510684 108.399L22.4062 111.071Z"></path><path d="M29.6197 94.8494L4.53235 87.2793L5.80906 83.0171L30.8964 90.5872L29.6197 94.8494Z"></path><path d="M30.8326 80.6633C27.4493 81.5539 24.066 81.045 20.4912 79.073C16.9165 77.1009 14.6184 74.4927 13.6608 71.2484C12.6395 67.9404 13.0863 64.6325 14.9376 61.1973C16.4058 58.5255 18.3847 56.617 20.8743 55.472C23.3 54.3269 25.7896 54.1361 28.343 54.8994L27.7046 59.1616C25.9811 58.6527 24.3214 58.7799 22.6616 59.5433C21.0019 60.2431 19.7252 61.4517 18.8315 63.1693C17.6186 65.3958 17.3633 67.6223 18.0655 69.7852C18.7677 71.9481 20.3636 73.7293 22.7893 75.0653C25.2151 76.4012 27.577 76.7828 29.8112 76.2739C32.0455 75.7014 33.769 74.3019 35.0457 72.139C35.9394 70.485 36.3224 68.7674 36.0671 66.9862C35.8118 65.205 35.0457 63.7419 33.7052 62.5332L36.9608 59.7341C38.9397 61.4517 40.1526 63.6146 40.4717 66.3501C40.7909 69.0219 40.2164 71.6937 38.7482 74.3655C36.7054 77.6098 34.152 79.7727 30.8326 80.6633Z"></path><path d="M58.6648 48.7288L44.8763 46.1842L45.2593 52.3548L50.1108 57.1895L46.919 60.3702L28.4067 41.7948L31.5985 38.6141L40.8547 47.9018L39.7056 30.5986L43.5996 26.7817L44.5571 41.6039L62.5587 44.8483L58.6648 48.7288Z"></path><path d="M78.9007 7.31574L82.9861 5.59814L93.1998 29.7081L89.1143 31.4257L84.8374 21.3109L73.1555 26.2093L77.4324 36.324L73.2831 38.0416L63.0695 13.9317L67.2188 12.2141L71.4957 22.3288L83.1776 17.4305L78.9007 7.31574Z"></path><path d="M102.775 23.6646L116.372 21.8198L116.947 25.9547L98.8812 28.3721L95.3702 2.48094L112.925 0.127197L113.5 4.26214L100.413 6.04335L101.371 12.9137L112.478 11.387L112.989 15.3311L101.881 16.8578L102.775 23.6646Z"></path><path d="M136.799 27.8632L133.352 17.7485L127.16 16.9851L125.947 26.5273L121.479 25.9548L124.671 0L135.714 1.33591C138.331 1.65398 140.31 2.67181 141.715 4.38941C143.119 6.107 143.63 8.14267 143.374 10.6236C142.928 14.0588 140.885 16.5398 137.757 17.494L141.779 28.4357L136.799 27.8632ZM128.692 4.70748L127.671 12.8501L133.927 13.6135C136.544 13.9316 138.523 12.4685 138.842 10.0511C139.161 7.63375 137.629 5.78893 134.948 5.40724L128.692 4.70748Z"></path><path d="M152.12 27.7359L164.887 32.825L163.355 36.7055L146.439 29.9624L156.142 5.66162L172.611 12.2139L171.079 16.0944L158.823 11.1961L156.269 17.6212L166.674 21.7561L165.206 25.4458L154.801 21.3108L152.12 27.7359Z"></path><path d="M207.465 37.7235L204.656 40.8406L198.209 35.1153L183.527 51.5278L180.144 48.5379L194.826 32.1254L188.378 26.4001L191.187 23.283L207.465 37.7235Z"></path><path d="M195.975 59.4797C196.805 56.1081 198.911 53.3727 202.295 51.1462C205.742 48.9196 209.125 48.2199 212.508 48.856C215.955 49.5558 218.7 51.5278 220.807 54.8358C222.913 58.1438 223.616 61.4517 222.786 64.8233C222.02 68.1949 219.913 70.9303 216.466 73.1568C213.019 75.3833 209.636 76.0831 206.252 75.4469C202.869 74.7472 200.124 72.7751 198.018 69.4672C195.847 66.1592 195.209 62.8512 195.975 59.4797ZM218.317 63.6146C218.892 61.4517 218.509 59.2888 217.168 57.1895C215.828 55.0903 213.977 53.818 211.742 53.4363C209.508 53.0546 207.21 53.6271 204.848 55.0903C202.486 56.5534 201.082 58.4618 200.443 60.6883C199.869 62.8512 200.252 65.0777 201.592 67.177C202.933 69.2763 204.784 70.485 207.018 70.8667C209.253 71.2484 211.551 70.6758 213.913 69.2127C216.275 67.6859 217.743 65.8411 218.317 63.6146Z"></path><path d="M237.404 97.712C238.106 101.656 237.468 104.964 235.553 107.763C233.638 110.562 230.701 112.343 226.807 112.98C222.913 113.616 219.594 112.98 216.785 110.944C213.976 108.908 212.253 105.918 211.551 101.911L210.019 93.0682L235.872 88.5515L237.404 97.712ZM215.572 101.084C216.019 103.692 217.232 105.664 219.083 107C220.998 108.336 223.296 108.781 225.914 108.336C228.531 107.89 230.51 106.682 231.85 104.773C233.191 102.928 233.638 100.638 233.191 98.0301L232.425 93.7043L214.87 96.7578L215.572 101.084Z"></path><path d="M216.913 122.458C219.722 120.422 223.105 119.659 227.127 120.168C231.148 120.677 234.276 122.267 236.383 125.003C238.553 127.738 239.383 130.982 238.872 134.863C238.362 138.743 236.766 141.67 233.957 143.769C231.212 145.868 227.829 146.632 223.743 146.123C219.722 145.614 216.594 144.023 214.423 141.288C212.253 138.616 211.487 135.308 211.998 131.428C212.508 127.484 214.104 124.557 216.913 122.458ZM231.276 139.952C233.127 138.68 234.276 136.771 234.595 134.29C234.915 131.809 234.34 129.646 232.872 127.929C231.404 126.211 229.297 125.13 226.552 124.748C223.807 124.366 221.509 124.875 219.594 126.148C217.743 127.42 216.594 129.392 216.275 131.873C215.955 134.354 216.53 136.453 217.998 138.171C219.466 139.888 221.573 140.97 224.382 141.351C227.127 141.733 229.425 141.288 231.276 139.952Z"></path><path d="M225.722 175.322L223.871 179.329L200.06 168.388L202.231 163.68L225.339 160.754L207.401 152.548L209.253 148.476L233.063 159.418L230.893 164.126L207.848 167.052L225.722 175.322Z"></path><path d="M185.059 186.582L190.294 188.617L198.018 179.839L195.273 174.94L198.337 171.441L211.678 195.997L208.295 199.877L181.931 190.144L185.059 186.582ZM200.06 183.528L194.315 190.144L206.444 194.915L200.06 183.528Z"></path><path d="M180.271 222.969L177.846 219.534L184.868 214.572L172.1 196.696L175.739 194.088L188.506 211.964L195.528 206.938L197.954 210.373L180.271 222.969Z"></path><path d="M158.567 208.91L145.736 213.809L144.204 209.928L161.248 203.376L170.696 227.804L154.163 234.165L152.631 230.285L164.951 225.577L162.461 219.152L151.992 223.16L150.588 219.47L161.057 215.462L158.567 208.91Z"></path><path d="M111.074 239L111.01 234.801L119.628 234.61L119.181 212.663L123.649 212.6L124.096 234.547L132.714 234.356L132.778 238.555L111.074 239Z"></path><path d="M104.754 215.272C106.414 218.262 106.797 221.76 105.775 225.641C104.754 229.585 102.775 232.448 99.8386 234.229C96.8383 236.01 93.5189 236.455 89.6888 235.438C85.8587 234.483 83.1776 232.448 81.454 229.458C79.7305 226.468 79.3474 223.033 80.3688 219.089C81.3902 215.145 83.3691 212.282 86.3055 210.501C89.2419 208.719 92.6252 208.338 96.4553 209.292C100.285 210.31 103.03 212.282 104.754 215.272ZM85.5395 227.295C86.6247 229.331 88.3482 230.667 90.774 231.239C93.1997 231.875 95.434 231.557 97.349 230.285C99.2641 229.013 100.605 227.104 101.307 224.432C102.009 221.76 101.818 219.407 100.732 217.371C99.6471 215.335 97.9236 213.999 95.434 213.363C92.9444 212.727 90.8378 213.045 88.9228 214.318C87.0077 215.59 85.6672 217.498 84.965 220.234C84.2628 222.969 84.4543 225.323 85.5395 227.295Z"></path><path d="M58.0903 221.76C54.707 219.661 52.6005 216.989 51.7706 213.681C50.9407 210.373 51.5791 207.002 53.6218 203.694C55.6646 200.386 58.4095 198.287 61.7928 197.523C65.176 196.76 68.5593 197.46 72.0703 199.623L79.7305 204.33L65.9421 226.595L58.0903 221.76ZM70.0275 203.249C67.7933 201.849 65.4952 201.404 63.261 201.913C60.9629 202.422 59.1755 203.885 57.7073 206.175C56.3029 208.401 55.8561 210.692 56.4306 212.918C56.9413 215.145 58.3457 216.989 60.6437 218.389L64.41 220.679L73.7938 205.539L70.0275 203.249Z"></path><path d="M46.2168 177.548L43.6634 182.574L51.7067 191.098L56.8774 188.872L60.0691 192.243L34.1519 202.93L30.641 199.177L43.0251 174.113L46.2168 177.548ZM47.7489 192.752L41.7484 186.327L35.7478 197.905L47.7489 192.752Z"></path><path d="M10.1498 168.833L30.0664 168.133L37.5352 163.871L39.7694 167.752L32.3007 172.014L21.5125 188.744L18.8952 184.228L26.9385 172.523L12.767 173.413L10.1498 168.833Z"></path></svg>
+                </div>
+            </div>
+            <div class="footer-info-container not-important-mobile">
+                <div class="footer-info-title">Hours & Info</div>
+                <div class="footer-info-desc">
+                    <a href="">Free and open daily<br>7:00 am – 10:00 pm</a>
+                </div>
+            </div>
+            <div class="footer-info-container">
+                <div class="footer-info-title">Say Hello</div>
+                <div class="footer-info-desc">
+                    <a href="">friends@therailpark.org<br>215-485-2221</a>
+                </div>
+            </div>
+            <div class="footer-info-container not-important-mobile">
+                <div class="footer-info-title">Entrance</div>
+                <div class="footer-info-desc">
+                    <a href="">N. Broad & Noble Streets<br>Philadelphia, PA 19123</a>
+                </div>
+            </div>
+            <div class="footer-info-container not-important-mobile">
+                <div class="footer-info-title">Office</div>
+                <div class="footer-info-desc">
+                    <a href="">1219 Vine Street, Suite M<br>Philadelphia, PA 19107</a>
+                </div>
+            </div>
+            <div class="footer-info-container copyright-mention">
+                <div class="footer-info-title">@ 2025 Friends of the Rail Park</div>
+                <div class="footer-info-title">The Friends of the Rail Park is a 501(c)3.<br>All donations are tax-deductible.</div>
+            </div>
+            <div class="footer-info-container not-important-mobile">
+                <div class="footer-info-title">Translations</div>
+                <div class="footer-info-desc">
+                    <a href="">Español</a> / <a href="">中文</a>
+                </div>
+            </div>
+            <div class="footer-info-container">
+                <div class="footer-info-title">Follow Along</div>
+                <div class="footer-info-desc social-media-links">
+                    <a href="">
+                        <i class="fa-brands fa-instagram insta-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter twitter-icon"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-facebook facebook-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/carousel_script.js"></script>
+    <script src="./scripts/parallax_script.js"></script>
+</html>
