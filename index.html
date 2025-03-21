@@ -48,7 +48,7 @@
                     <div class="main-title-line">Park</div>
                 </div>
             </div>
-            <div class="carousel-section">
+            <div class="carousel-section" id="carousel-section">
                 <div class="carousel-scroller scroller-button-left not-important-mobile" onclick="switchSlide(-1)">
                     <div class="arrow-left carousel-arrow vertically-centered">
                         <div class="arrow-head"></div>
@@ -119,7 +119,7 @@
                 <div class="visit-content-container">
                     <div class="visit-content">
                         <div class="visit-media-container">
-                            <video class="visit-media-video" src="./assets/videos/noble-st-entrance.mp4" muted loop></video>
+                            <video class="visit-media-video not-important-mobile" src="./assets/videos/noble-st-entrance.mp4" muted loop></video>
                             <img class="visit-media-thumbnail" src="./assets/images/noble-st-entrance.avif">
                         </div>
                         <div class="visit-desc-container">
@@ -155,7 +155,7 @@
                     </div>
                     <div class="visit-content">
                         <div class="visit-media-container">
-                            <video class="visit-media-video" src="./assets/videos/callowhill-st-entrance.mp4" muted loop></video>
+                            <video class="visit-media-video not-important-mobile" src="./assets/videos/callowhill-st-entrance.mp4" muted loop></video>
                             <img class="visit-media-thumbnail" src="./assets/images/callowhill-st-entrance.avif">
                         </div>
                         <div class="visit-desc-container">
@@ -192,11 +192,18 @@
                 </div>
             </div>
             <div class="hov-media-section">
+                <div class="hov-media-container-mobile not-important-desktop">
+                    <video class="hov-media" id="hov-media" src="./assets/videos/visit-video-placeholder-small.mp4" autoplay muted playsinline loop></video>
+                    <button class="hov-media-controller hov-media-play" id="hov-media-controller">
+                        <i class="fa-solid fa-play hov-media-control-icon"></i>
+                        <i class="fa-solid fa-pause hov-media-control-icon"></i>
+                    </button>
+                </div>
                 <div class="hov-media-title" id="hov-media-title">
                     <div class="hov-media-title-line">We are building a</div>
                     <div class="hov-media-container">
                         <div class="hov-media-title-line" id="hov-media-line-main">three mile greenway</div>
-                        <video class="hov-media" id="hov-media" src="./assets/videos/visit-video-placeholder-small.mp4" autoplay muted playsinline loop></video>
+                        <video class="hov-media not-important-mobile" id="hov-media" src="./assets/videos/visit-video-placeholder-small.mp4" autoplay muted playsinline loop></video>
                     </div>
                     <div class="hov-media-title-line">with three distinct sections</div>
                     <div class="hov-media-title-line">across ten neighborhoods</div>
@@ -206,7 +213,7 @@
             <div class="image-parallax-section">
                 <div class="image-parallax-container">
                     <div class="image-parallax-media-wrapper">
-                        <video class="image-parallax-media" src="./assets/videos/homepage-viaduct.mp4" autoplay muted loop></video>
+                        <video class="image-parallax-media not-important-mobile" src="./assets/videos/homepage-viaduct.mp4" autoplay muted loop></video>
                         <img class="image-parallax-thumbnail" src="./assets/images/homepage-viaduct.avif"></img>
                     </div>
                     <div class="image-parallax-media-text-wrapper">
@@ -218,7 +225,7 @@
                 </div>
                 <div class="image-parallax-container">
                     <div class="image-parallax-media-wrapper">
-                        <video class="image-parallax-media" src="./assets/videos/homepage-cut.mp4" autoplay muted loop></video>
+                        <video class="image-parallax-media not-important-mobile" src="./assets/videos/homepage-cut.mp4" autoplay muted loop></video>
                         <img class="image-parallax-thumbnail" src="./assets/images/homepage-cut"></img>
                     </div>
                     <div class="image-parallax-media-text-wrapper">
@@ -236,7 +243,7 @@
                 </div>
                 <div class="image-parallax-container">
                     <div class="image-parallax-media-wrapper">
-                        <video class="image-parallax-media" src="./assets/videos/homepage-tunnel.mp4" autoplay muted loop></video>
+                        <video class="image-parallax-media not-important-mobile" src="./assets/videos/homepage-tunnel.mp4" autoplay muted loop></video>
                         <img class="image-parallax-thumbnail" src="./assets/images/homepage-tunnel.avif"></img>
                     </div>
                     <div class="image-parallax-media-text-wrapper">
@@ -352,7 +359,7 @@
             <div class="email-section-content">
                 <div class="email-section-text" id="email-section-text">Be the first to know about news, events, and progress.</div>
                 <div class="email-section-input-wrapper" id="email-section-input-wrapper">
-                    <input type="email" class="email-section-input" id="email-section-input" spellcheck="false" placeholder="Enter your email" />
+                    <input maxlength="320" type="email" class="email-section-input" id="email-section-input" spellcheck="false" placeholder="Enter your email" />
                     <button class="email-submit-button" id="email-submit-button" disabled >
                         <div class="email-arrow">
                             <div class="email-arrow-head"></div>

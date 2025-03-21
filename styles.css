@@ -32,12 +32,15 @@ body {
     background-color: var(--color-light);
 }
 
+body, html {scroll-behavior: smooth;}
+
 ::selection {
     color: var(--color-dark);
     background-color: var(--accent-color-light);
 }
 
 a {
+    cursor: pointer;
     transition: color 0.3s;
     color: var(--color-dark);
     text-decoration: none;
@@ -546,6 +549,7 @@ nav {
 
 .visit-content-other {
     display: flex;
+    gap: 24px;
     font-size: 20px;
     font-family: var(--main-font-light);
     font-weight: 600;
@@ -688,11 +692,44 @@ nav {
     display: inline-block;
     font-family: var(--main-font-bold);
     line-height: calc(clamp(40px, 30px + 3vw, 80px) + 6px);
-    font-size: clamp(40px, 30px + 3vw, 80px)
+    font-size: clamp(40px, 30px + 3vw, 80px);
+    letter-spacing: -2px;
 }
 
 .hov-media-container .hov-media-title-line {
     color: var(--accent-color);
+}
+
+.hov-media-container-mobile {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.hov-media-controller {
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    left: 100%;
+    transform: translate(calc(-100% - 15px), calc(-100% - 15px));
+    border: 1px solid var(--color-light);
+    border-radius: 100%;
+    padding: 6px;
+    aspect-ratio: 1;
+    height: 40px;
+    width: 40px;
+}
+
+.hov-media-play .fa-play {opacity: 0;}
+.hov-media-pause .fa-pause {opacity: 0;}
+.hov-media-control-icon {
+    color: var(--color-light);
+    font-size: 21px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 .hov-media-desc {
@@ -736,6 +773,7 @@ nav {
         grid-area: 2 / 8 / span 2 / span 5;
 
         & .image-parallax-media-wrapper {aspect-ratio: 1.78;}
+        & .image-parallax-media {height: calc(100% - 6px);} 
     }
     &:nth-of-type(3) {
         grid-area: 3 / 2 / span 1 / span 5;
@@ -1099,8 +1137,8 @@ footer {
 @media (max-width: 1100px) {
     .secondary-carousel-image {
         top: 0%;
-        left: 72%;
-        transform: translate(0%, -66%);
+        left: 90%;
+        transform: translate(-100%, -66%);
         max-width: 90px;
     }
     .image-parallax-text {font-size: 18px !important;}
@@ -1161,7 +1199,7 @@ footer {
     }
     .visit-loca-street {
         max-width: 100%;
-        width: fit-content;
+        width: fit-content !important;
     }
     .visit-content-other {justify-content: space-between;}
     .visit-icon-desc-box {border-radius: 6px 6px 0px 6px;}
@@ -1170,6 +1208,8 @@ footer {
         left: 100%;
         transform: translateX(-1px) translateY(-100%);
     }
+    .visit-media-thumbnail:hover {opacity: 1;}
+    .image-parallax-thumbnail:hover {opacity: 1;}
     .future-events-section {margin-top: 180px;}
     .not-important-mobile {display: none;}
     footer {grid-template-columns: 1fr;}
@@ -1205,6 +1245,7 @@ footer {
         width: 100%;
         gap: var(--body-padding-x);
         overflow-x: scroll;
+        overflow-y: visible;
         scroll-snap-type: x mandatory;
         user-select: none;
         -webkit-user-drag: none;
@@ -1216,10 +1257,12 @@ footer {
         }
         &::-webkit-scrollbar {display: none;}
     }
+    .main-title {max-width: 100%;}
+    .footer-info-title {font-size: 15px;}
+    .footer-info-desc a {font-size: 24px;}
 }
 
 @media (max-width: 620px) {
-    
     .image-parallax-container {
         &:nth-of-type(1) {
             grid-area: 1 / 1 / span 1 / span 12;
@@ -1248,6 +1291,67 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+    }
+    .visit-arrow-head {
+        height: 24px !important;
+        width: 24px !important;
+    }
+    .visit-arrow-left .visit-arrow-head {transform: rotateZ(45deg) translateX(-1px) translateY(1px);}
+    .visit-arrow-right .visit-arrow-head {transform: rotateZ(45deg) translateX(0px) translateY(1px);}
+    .visit-arrow-tail {
+        width: 36px;
+        transform: translateY(-1px);
+    }
+    .visit-content-other {font-size: 16px;}
+    .visit-icon-desc-box {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .future-events-title {
+        writing-mode: horizontal-tb;
+        text-align: center;
+    }
+    .future-events-main {flex-direction: column;}
+    .future-events-container {
+        margin: 0px;
+        gap: 12px;
+    }
+    .future-event-title {font-size: 18px;}
+    .future-event-date {font-size: 12px;}
+    .ext-link-arrow {
+        & .ext-link-arrow-head {border-width: 1px;}
+        & .ext-link-arrow-tail {
+            height: 1px;
+            transform: translateX(0px) translateY(1px) rotateZ(-45deg);
+        }
+    }
+    .email-section-input-wrapper {
+        flex-direction: column;
+        border-width: 0px;
+    }
+    .email-section-input {
+        border-bottom: 1px solid #008d3c;
+        text-align: center;
+    }
+    .email-submit-button {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+    .email-section {padding: 36px var(--body-padding-x)}
+    .email-section-text {font-size: 18px;}
+    .copyright-mention {
+        gap: 0px;
+        & div {font-size: 12px;}
+    }
+    footer {padding: 36px var(--body-padding-x);}
+    .nav-content {padding: 16px 0px;}
+    .main-body {margin-top: 132px;}
+    .hov-media {
+        opacity: 1;
+        position: relative;
+        transform: none;
+        width: 100%;
     }
     /* TODO: Fix video peaking through thumbnail at bottom (image parallax section) */
 }

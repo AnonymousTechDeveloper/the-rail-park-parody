@@ -3,7 +3,7 @@ const carouselSlides = [
         title: "Phase One is free & open daily",
         linkText: "Plan your visit",
         imageURL: "./assets/images/carousel_image_1.avif",
-        secImageURL: "./assets/images/hours_badge.svg"
+        secImageURL: "./assets/images/hours-badge.svg"
     },
     {
         title: "Turning historic tracks into an unparalleled park.",

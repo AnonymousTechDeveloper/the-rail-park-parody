@@ -4,6 +4,7 @@ const visitTitleElement = document.getElementById("visit-title");
 const hovMediaTitleElement = document.getElementById("hov-media-title");
 const hovMediaMainLineElement = document.getElementById("hov-media-line-main");
 const hovMediaVideoElement = document.getElementById("hov-media");
+const hovMediaControllerButton = document.getElementById("hov-media-controller");
 const emailInputElement = document.getElementById("email-section-input");
 const emailSubmitButton = document.getElementById("email-submit-button");
 const emailTextElement = document.getElementById("email-section-text");
@@ -45,23 +46,8 @@ window.addEventListener("scroll", () => {
     else if (deltaScrollTop < -scrollThreshhold)  navBar.style.transform = 'translateY(0%)';
 })
 
-visitContainerList.forEach((container) => {
-    const mediaThumbnail = container.getElementsByTagName("img")[0];
-    const mediaVideo = container.getElementsByTagName("video")[0];
-
-    container.addEventListener("cursorenter", (event) => {
-        mediaVideo.play();
-        mediaThumbnail.style.opacity = 0;
-    })
-    container.addEventListener("cursorleave", (event) => {
-        mediaVideo.pause();
-        mediaVideo.currentTime = 0;
-        mediaThumbnail.style.opacity = 1;
-    })
-})
-
 hovMediaMainLineElement.onmouseenter = (event) => {
-    if (window.innerWidth < 900) return;
+    if (window.innerWidth < 970) return;
 
     cursorCoords = [event.screenX, event.screenY];
     const moveVideoToCursorInterval = setInterval(moveVideoTowardsCursor, 0);
@@ -105,8 +91,9 @@ emailInputElement.oninput = (event) => {
 
 function handleEmailSubmit() {
     const emailQuery = emailInputElement.value;
+    if (!emailQuery) return;
     //TODO: Make it more precise: https://stackoverflow.com/questions/2049502/what-characters-are-allowed-in-an-email-address
-    const emailFormat = /^([\w\.-])+@(\w|\.)+$/;
+    const emailFormat = /^((\w[\w\.-_]*\w)|(\w))@\w(\w|\.)*\.(\w|\.)*\w$/;
 
     document.getElementById("email-section-input-wrapper").style.display = 'none';
     if (emailFormat.test(emailQuery)) emailTextElement.innerText = "Thank you for subscribing!";
@@ -114,3 +101,11 @@ function handleEmailSubmit() {
 }
 
 emailSubmitButton.onclick = () => handleEmailSubmit();
+emailInputElement.onkeydown = (event) => (event.key === 'Enter') ? handleEmailSubmit() : null;
+
+hovMediaControllerButton.onclick = () => {
+    if (hovMediaVideoElement.paused) hovMediaVideoElement.play();
+    else hovMediaVideoElement.pause();
+    hovMediaControllerButton.classList.toggle("hov-media-play");
+    hovMediaControllerButton.classList.toggle("hov-media-pause");
+}
