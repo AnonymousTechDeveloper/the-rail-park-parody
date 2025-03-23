@@ -318,13 +318,13 @@ nav {
 
 }
 @media (max-width: 620px) {
-    .nav-content {padding: 16px 0px;}
     .nav-content {
         flex-wrap: wrap;
         height: fit-content;
-        padding-bottom: 0px;
+        padding: 16px 0px;
     }
     .menu-on {
+        & .nav-content {padding-bottom: 0px;}
         & .nav-options-container {display: none !important;}
         & .nav-links-container {display: block;}
         & .nav-search-container {
