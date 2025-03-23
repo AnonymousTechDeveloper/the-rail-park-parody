@@ -17,6 +17,7 @@ function handleCarouselParallax() {
 }
 
 function handleImageTextParallax(element) {
+    if (window.innerWidth < 970) return;
     const elementData = element.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     if (windowHeight - elementData.top < 0 || elementData.bottom < 0) return;
@@ -26,6 +27,7 @@ function handleImageTextParallax(element) {
 }
 
 function handleImageDescParallax() {
+    if (window.innerWidth < 970) return;
     const elementData = imageParallaxDescriptionElement.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     if (windowHeight - elementData.top < 0 || elementData.bottom < 0) return;

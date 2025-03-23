@@ -8,6 +8,14 @@ const hovMediaControllerButton = document.getElementById("hov-media-controller")
 const emailInputElement = document.getElementById("email-section-input");
 const emailSubmitButton = document.getElementById("email-submit-button");
 const emailTextElement = document.getElementById("email-section-text");
+const menuButton = document.getElementById("nav-menu-button");
+const menuBody = document.getElementById("menu-body");
+const menuAnimationElements = [...document.getElementsByClassName("menu-anim-elem")];
+
+const totalAnimationDelay = 1; 
+menuAnimationElements.forEach((element, index) => {
+    element.style.animationDelay = `${totalAnimationDelay*index/menuAnimationElements.length}s`;
+});
 
 [...document.getElementsByClassName("image-parallax-media")].forEach((mediaElement) => {
     mediaElement.onmouseenter = () => mediaElement.play()
@@ -36,6 +44,8 @@ const hovMediaTitleObserver = new window.IntersectionObserver(([entries], observ
 hovMediaTitleObserver.observe(hovMediaTitleElement);
 
 window.addEventListener("scroll", () => {
+    if (navBar.classList.contains("menu-on")) return;
+
     const newScrollTop = document.scrollingElement.scrollTop;
     const deltaScrollTop = newScrollTop - prevScrollTop;
     const scrollThreshhold = 6;
@@ -109,3 +119,5 @@ hovMediaControllerButton.onclick = () => {
     hovMediaControllerButton.classList.toggle("hov-media-play");
     hovMediaControllerButton.classList.toggle("hov-media-pause");
 }
+
+menuButton.onclick = () => navBar.classList.toggle("menu-on");
