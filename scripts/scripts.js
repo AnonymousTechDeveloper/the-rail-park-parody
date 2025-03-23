@@ -10,12 +10,12 @@ const emailSubmitButton = document.getElementById("email-submit-button");
 const emailTextElement = document.getElementById("email-section-text");
 const menuButton = document.getElementById("nav-menu-button");
 const menuBody = document.getElementById("menu-body");
-const menuAnimationElements = [...document.getElementsByClassName("menu-anim-elem")];
+const menuAnimationElementsDesktop = [...document.getElementById("desktop-menu").getElementsByClassName("menu-anim-elem")];
+const menuAnimationElementsMobile = [...document.getElementById("mobile-menu").getElementsByClassName("menu-anim-elem")];
 
 const totalAnimationDelay = 1; 
-menuAnimationElements.forEach((element, index) => {
-    element.style.animationDelay = `${totalAnimationDelay*index/menuAnimationElements.length}s`;
-});
+menuAnimationElementsDesktop.forEach((element, index) => element.style.animationDelay = `${totalAnimationDelay*index/(menuAnimationElementsDesktop.length - 1)}s`);
+menuAnimationElementsMobile.forEach((element, index) => element.style.animationDelay = `${totalAnimationDelay*index/(menuAnimationElementsMobile.length - 1)}s`);
 
 [...document.getElementsByClassName("image-parallax-media")].forEach((mediaElement) => {
     mediaElement.onmouseenter = () => mediaElement.play()
