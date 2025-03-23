@@ -3,7 +3,8 @@ const visitContainerList = [...document.getElementsByClassName("visit-content")]
 const visitTitleElement = document.getElementById("visit-title");
 const hovMediaTitleElement = document.getElementById("hov-media-title");
 const hovMediaMainLineElement = document.getElementById("hov-media-line-main");
-const hovMediaVideoElement = document.getElementById("hov-media");
+const hovMediaVideoElementDesktop = document.getElementById("hov-media-desktop");
+const hovMediaVideoElementMobile = document.getElementById("hov-media-mobile");
 const hovMediaControllerButton = document.getElementById("hov-media-controller");
 const emailInputElement = document.getElementById("email-section-input");
 const emailSubmitButton = document.getElementById("email-submit-button");
@@ -62,7 +63,7 @@ hovMediaMainLineElement.onmouseenter = (event) => {
     cursorCoords = [event.screenX, event.screenY];
     const moveVideoToCursorInterval = setInterval(moveVideoTowardsCursor, 0);
 
-    hovMediaVideoElement.style.opacity = 1;
+    hovMediaVideoElementDesktop.style.opacity = 1;
 
     const updateCursorCoords = (_event) => {cursorCoords = [_event.screenX, _event.screenY];}
 
@@ -71,7 +72,7 @@ hovMediaMainLineElement.onmouseenter = (event) => {
     hovMediaMainLineElement.onmouseleave = (_event) => {
         
         setTimeout(() => {hovMediaMainLineElement.onmousemove = null}, 300);
-        hovMediaVideoElement.style.opacity = 0;
+        hovMediaVideoElementDesktop.style.opacity = 0;
         window.removeEventListener("mousemove", updateCursorCoords);
         setTimeout(() => clearInterval(moveVideoToCursorInterval), 300)
     }
@@ -88,10 +89,8 @@ function moveVideoTowardsCursor() {
 
     videoCoords = [videoCoords[0] + (distanceVector[0]*(Math.log(distanceScalar*velocityCoefficient + 1))*velocityContant), videoCoords[1] + (distanceVector[1]*(Math.log(distanceScalar*velocityCoefficient + 1))*velocityContant)];
 
-    console.log(videoCoords, cursorCoords)
-
-    hovMediaVideoElement.style.left = `${videoCoords[0]}px`;
-    hovMediaVideoElement.style.top = `${videoCoords[1]}px`;
+    hovMediaVideoElementDesktop.style.left = `${videoCoords[0]}px`;
+    hovMediaVideoElementDesktop.style.top = `${videoCoords[1]}px`;
 }
 
 emailInputElement.oninput = (event) => {
@@ -102,7 +101,6 @@ emailInputElement.oninput = (event) => {
 function handleEmailSubmit() {
     const emailQuery = emailInputElement.value;
     if (!emailQuery) return;
-    //TODO: Make it more precise: https://stackoverflow.com/questions/2049502/what-characters-are-allowed-in-an-email-address
     const emailFormat = /^((\w[\w\.-_]*\w)|(\w))@\w(\w|\.)*\.(\w|\.)*\w$/;
 
     document.getElementById("email-section-input-wrapper").style.display = 'none';
@@ -114,8 +112,8 @@ emailSubmitButton.onclick = () => handleEmailSubmit();
 emailInputElement.onkeydown = (event) => (event.key === 'Enter') ? handleEmailSubmit() : null;
 
 hovMediaControllerButton.onclick = () => {
-    if (hovMediaVideoElement.paused) hovMediaVideoElement.play();
-    else hovMediaVideoElement.pause();
+    if (hovMediaVideoElementMobile.paused) hovMediaVideoElementMobile.play();
+    else hovMediaVideoElementMobile.pause();
     hovMediaControllerButton.classList.toggle("hov-media-play");
     hovMediaControllerButton.classList.toggle("hov-media-pause");
 }
