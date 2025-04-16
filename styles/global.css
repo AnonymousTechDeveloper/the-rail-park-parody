@@ -241,17 +241,24 @@ nav {
     justify-content: center;
 }
 
+.nav-options-wrapper {
+    width: fit-content;
+    margin-left: auto;
+    height: 100%;
+}
+
 .nav-lang-option {
     color: var(--color-foreground);
 
     &:hover {color: var(--accent-color-dark)}
 }
 
+.nav-options-container, .nav-menu-button-container {flex: 1;}
+
 .menu-on {
     --color-foreground: var(--color-light);
     --color-background: var(--color-dark);
 
-    position: relative;
     border-bottom: 1px solid rgb(69, 69, 69);
 
     & .nav-links-container {display: none;}
@@ -273,8 +280,7 @@ nav {
     }
 
     & .nav-lang-container {display: none;}
-
-    & ~ .main-body, & ~ .email-section, & ~ footer {display: none;}
+    
     & ~ .menu-body {display: block;}
 }
 
@@ -340,6 +346,8 @@ nav {
 
 .future-events-section {
     margin-top: 240px;
+    display: flex;
+    flex-direction: column;
 }
 
 .future-events-full-cal-button {
@@ -449,6 +457,8 @@ nav {
     }
     .future-event-title {font-size: 18px;}
     .future-event-date {font-size: 12px;}
+    .future-events-section {flex-direction: column-reverse;}
+    .future-events-full-cal-button {margin: 18px auto 36px auto;}
 }
 
 /*-------------------------------- Email section styles ------------------------------*/
@@ -672,8 +682,14 @@ footer {
     flex: 1;
     padding: 0px var(--body-padding-x);
     background-color: var(--color-background);
-    overflow-y: auto;
     animation: none;
+    position: fixed;
+    left: 0px;
+    top: 123px;
+    height: calc(100% - 123px);
+    overflow-y: auto;
+    width: calc(100% - var(--body-padding-x)*2);
+    z-index: 101;
 }
 
 .menu-section {
@@ -785,5 +801,10 @@ footer {
 @media (max-width: 620px) {
     .desktop-menu {display: none;}
     .mobile-menu {display: block;}
-    .menu-body {padding: 0px;}
+    .menu-body {
+        padding: 0px;
+        top: 157px;
+        width: 100%;
+        height: calc(100% - 157px);
+    }
 }

@@ -40,7 +40,7 @@ function switchSlide(direction) {
 
         carouselTitleElement.innerText = carouselSlides[carouselActiveSlideIndex].title;
         carouselLinkElement.innerText = carouselSlides[carouselActiveSlideIndex].linkText;
-      
+
         carouselImageElement.classList.replace("carousel-outro-anim-elem", "carousel-intro-anim-elem");
         carouselSecImageElement.classList.replace("badge-outro-anim-elem", "badge-intro-anim-elem");
         carouselTextContainer.style.transform = "translateY(0px)";

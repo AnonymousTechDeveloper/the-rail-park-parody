@@ -118,4 +118,7 @@ hovMediaControllerButton.onclick = () => {
     hovMediaControllerButton.classList.toggle("hov-media-pause");
 }
 
-menuButton.onclick = () => navBar.classList.toggle("menu-on");
+menuButton.onclick = () => {
+    if (navBar.classList.toggle("menu-on")) document.scrollingElement.style.overflowY = "hidden";
+    else document.scrollingElement.style.overflowY = "scroll";
+}
